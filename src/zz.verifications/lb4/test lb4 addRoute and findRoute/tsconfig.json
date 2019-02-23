@@ -1,11 +1,6 @@
 {
-  "compilerOptions": {
-    "module": "es6",
-    "target": "es6",
-    "outDir": "./dist",
-    "sourceMap": true
-  },
   "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "@loopback/build/config/tsconfig.common.json",
   "include": [
     "src",
     "test",

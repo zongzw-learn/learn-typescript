@@ -1,0 +1,13 @@
+{
+  "ids": {
+    "Member": 5
+  },
+  "models": {
+    "Member": {
+      "yyyyyyyy": "{\"id\":\"yyyyyyyy\",\"name\":\"yyyyyy zongzw member.\"}",
+      "xxxdsf": "{\"id\":\"xxxdsf\",\"name\":\"fawefawfw zongzw member.\"}",
+      "string": "{\"id\":\"string\",\"name\":\"string\"}",
+      "sdfdsaas": "{\"id\":\"sdfdsaas\",\"name\":\"string\"}"
+    }
+  }
+}
