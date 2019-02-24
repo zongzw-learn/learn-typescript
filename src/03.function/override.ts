@@ -1,5 +1,14 @@
+/**
+ * 重载 注意这里的typeof 获取参数的类型。 
+ * 但是 function pickCard(x): any 并不是重载的一部分。 
+ * 这里更像是两个不同的声明，而后在 function pickCard(x): any中
+ * 定义各种不同参数的处理过程。 
+ */
+
 let suits = ["hearts", "spades", "clubs", "diamonds"];
 
+function pickCard(x: {suit: string; card: number; }[]): number;
+function pickCard(x: number): {suit: string; card: number; };
 function pickCard(x): any {
     // Check to see if we're working with an object/array
     // if so, they gave us the deck and we'll pick the card
