@@ -120,7 +120,7 @@ type LinkedList<T> = T & { next: LinkedList<T> };
 
 // 不能出现在声明的右侧？？为什吗上边这个可以: 实际上可以出现在右侧，但是不能够circularly declared
 //TS2456: Type alias 'Yikes' circularly references itself.
-type Yikes = Array<Yikes>; // error
+//type Yikes = Array<Yikes>; // error
 
 // interface Person {
 //     name: string;
@@ -234,7 +234,7 @@ function area(s: Shape) {
 }
 
 /**
- * 多台的this，this 指向的是当前类型，这点很好用。 
+ * 多态的this，this 指向的是当前类型，这点很好用。 
  */
 
 class BasicCalculator {
