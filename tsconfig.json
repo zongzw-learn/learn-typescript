@@ -3,7 +3,8 @@
     "module": "es6",
     "target": "es6",
     "outDir": "./dist",
-    "sourceMap": true
+    "sourceMap": true,
+    "experimentalDecorators": true
   },
   "$schema": "http://json.schemastore.org/tsconfig",
   "include": [

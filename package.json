@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "npm run build",
     "build:watch": "tsc --watch",
-    "build": "tsc --target es5 index.ts --outDir dist/",
+    "build": "tsc --target es5 --experimentalDecorators index.ts --outDir dist/",
     "start": "node ./dist"
   },
   "author": "andrew",
