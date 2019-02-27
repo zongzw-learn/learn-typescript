@@ -8,7 +8,7 @@ class ZipCodeValidator {
 /**
  * 通过export =  导出的模块使用 import = require 导入使用。 
  */
-export = ZipCodeValidator;
+// export = ZipCodeValidator;
 
-import zip = require('./ZipCodeValidator');
+// import zip = require('./ZipCodeValidator');
 
