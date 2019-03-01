@@ -48,3 +48,18 @@ function findKeeper<A extends Animal, K> (
 //                           ~
 // let l = new Lion();
 // console.log(findKeeper(l).nametag);
+
+/**
+ * 简单来说prototype： prototype属性允许您向对象添加属性和方法。
+ */
+
+function employee1(id:number,name:string) { 
+    this.id = id 
+    this.name = name 
+ } 
+ var emp1 = new employee1(123,"Smith") 
+ employee1.prototype.email="smith@abc.com" 
+ console.log("Employee 's Id: "+emp1.id) 
+ console.log("Employee's name: "+emp1.name) 
+ console.log("Employee's Email ID: "+emp1.email)
+ 

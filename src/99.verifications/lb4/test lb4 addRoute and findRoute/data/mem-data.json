@@ -1,6 +1,7 @@
 {
   "ids": {
-    "Member": 5
+    "Member": 5,
+    "Pool": 5
   },
   "models": {
     "Member": {
@@ -8,6 +9,11 @@
       "xxxdsf": "{\"id\":\"xxxdsf\",\"name\":\"fawefawfw zongzw member.\"}",
       "string": "{\"id\":\"string\",\"name\":\"string\"}",
       "sdfdsaas": "{\"id\":\"sdfdsaas\",\"name\":\"string\"}"
+    },
+    "Pool": {
+      "zongzw": "{\"id\":\"zongzw\",\"name\":\"value\"}",
+      "zongzw1": "{\"id\":\"zongzw1\",\"name\":\"string\"}",
+      "zongzw2": "{\"id\":\"zongzw2\",\"name\":\"string\"}"
     }
   }
 }

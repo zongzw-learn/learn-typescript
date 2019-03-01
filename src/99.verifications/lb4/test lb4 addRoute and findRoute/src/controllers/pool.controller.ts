@@ -27,17 +27,17 @@ export class PoolController {
     public memberRepository: MemberRepository,
   ) { }
 
-  // @post('/pools', {
-  //   responses: {
-  //     '200': {
-  //       description: 'Pool model instance',
-  //       content: { 'application/json': { schema: { 'x-ts-type': Pool } } },
-  //     },
-  //   },
-  // })
-  // async create(@requestBody() pool: Pool): Promise<Pool> {
-  //   return await this.poolRepository.create(pool);
-  // }
+  @post('/pools', {
+    responses: {
+      '200': {
+        description: 'Pool model instance',
+        content: { 'application/json': { schema: { 'x-ts-type': Pool } } },
+      },
+    },
+  })
+  async create(@requestBody() pool: Partial<Pool>): Promise<Pool> {
+    return await this.poolRepository.create(pool);
+  }
 
   // @get('/pools', {
   //   responses: {
@@ -57,6 +57,23 @@ export class PoolController {
   //   return await this.poolRepository.find(filter);
   // }
 
+
+  @get('/pools/{longnamepoolid}', {
+    responses: {
+      '200': {
+        description: 'Pool model instance',
+        content: { 'application/json': { schema: { 'x-ts-type': Pool } } },
+      },
+    },
+  })
+  async findById(@param.path.string('longnamepoolid') id: string): Promise<Pool> {
+    console.log(`/pools/{longnamepoolid}: poolid: ${id}`);
+    let pool: Pool = await this.poolRepository.findById(id);
+    console.log(pool.members);
+    return pool;
+  }
+
+
   @get('/pools/{poolid}/members/{memberid}', {
     responses: {
       '200': {
@@ -72,21 +89,6 @@ export class PoolController {
     console.log(`/pools/{ poolid } / members / { memberid }: poolid: ${poolid}, memberid: ${memberid}`);
     return new Promise<Pool>(() => { });
     return await this.poolRepository.findById(poolid);
-  }
-
-  @get('/pools/{longnamepoolid}', {
-    responses: {
-      '200': {
-        description: 'Pool model instance',
-        content: { 'application/json': { schema: { 'x-ts-type': Pool } } },
-      },
-    },
-  })
-  async findById(@param.path.string('longnamepoolid') id: string): Promise<Pool> {
-    console.log(`/pools/{longnamepoolid}: poolid: ${id}`);
-    return new Promise<Pool>(() => { });
-
-    //return await this.poolRepository.findById(id);
   }
 
 
