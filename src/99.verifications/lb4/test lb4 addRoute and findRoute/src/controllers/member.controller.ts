@@ -37,23 +37,30 @@ export class MemberController {
   //   return await this.memberRepository.create(member);
   // }
 
-  // @get('/members', {
-  //   responses: {
-  //     '200': {
-  //       description: 'Array of Member model instances',
-  //       content: {
-  //         'application/json': {
-  //           schema: { type: 'array', items: { 'x-ts-type': Member } },
-  //         },
-  //       },
-  //     },
-  //   },
-  // })
-  // async find(
-  //   @param.query.object('filter', getFilterSchemaFor(Member)) filter?: Filter,
-  // ): Promise<Member[]> {
-  //   return await this.memberRepository.find(filter);
-  // }
+  @get('/members', {
+    responses: {
+      '200': {
+        description: 'Array of Member model instances',
+        content: {
+          'application/json': {
+            schema: { type: 'array', items: { 'x-ts-type': Member } },
+          },
+        },
+      },
+    },
+  })
+  async find(
+    @param.query.object('filter', getFilterSchemaFor(Member)) filter?: Filter,
+  ): Promise<Member[]> {
+    return await this.memberRepository.find({
+      where: {
+        id: {
+          inq: undefined //[] //['sfds', 'asfew']
+        }
+      }
+    });
+    //return await this.memberRepository.find(filter);
+  }
 
   // @get('/pools/{poolid}/members/{memberid}', {
   //   responses: {

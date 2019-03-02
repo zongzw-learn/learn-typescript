@@ -69,10 +69,10 @@ export class PoolController {
   async findById(@param.path.string('longnamepoolid') id: string): Promise<Pool> {
     console.log(`/pools/{longnamepoolid}: poolid: ${id}`);
     let pool: Pool = await this.poolRepository.findById(id);
+    await this.poolRepository.findById(undefined);
     console.log(pool.members);
     return pool;
   }
-
 
   @get('/pools/{poolid}/members/{memberid}', {
     responses: {
