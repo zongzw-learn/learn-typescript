@@ -1,0 +1,22 @@
+{
+  "ids": {
+    "Pool": 124,
+    "HttpMonitor": 5,
+    "ICMPMonitor": 5337
+  },
+  "models": {
+    "Pool": {
+      "123": "{\"id\":\"123\",\"name\":\"string\"}",
+      "string": "{\"id\":\"string\",\"name\":\"string\"}"
+    },
+    "HttpMonitor": {
+      "4": "{\"id\":\"4\",\"name\":\"myhttpmonitor\",\"type\":\"http\",\"poolId\":\"123\",\"ip\":\"1.1.1.1\",\"port\":345,\"timeout\":30}"
+    },
+    "ICMPMonitor": {
+      "4": "{\"id\":\"4\",\"name\":\"myhttpmonitor\",\"type\":\"icmp\",\"poolId\":\"123\",\"ip\":\"1.1.1.1\",\"interval\":30}",
+      "5": "{\"id\":\"5\",\"name\":\"myhttpmonitor\",\"type\":\"icmp\",\"poolId\":\"123\",\"ip\":\"1.1.1.1\",\"interval\":30}",
+      "56": "{\"id\":\"56\",\"name\":\"myhttpmonitor\",\"type\":\"icmp\",\"poolId\":\"123\",\"ip\":\"1.1.1.1\",\"interval\":30}",
+      "5336": "{\"id\":\"5336\",\"name\":\"myicmpmonitor\",\"type\":\"icmp\",\"poolId\":\"1234\",\"ip\":\"1.1.1.1\",\"interval\":30}"
+    }
+  }
+}

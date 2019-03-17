@@ -1,13 +1,12 @@
 import { Entity, model, property } from '@loopback/repository';
 
 @model()
-export class Adc extends Entity {
+export class Monitor extends Entity {
   @property({
     type: 'string',
     id: true,
-    required: true,
   })
-  id: string;
+  id?: string;
 
   @property({
     type: 'string',
@@ -15,13 +14,18 @@ export class Adc extends Entity {
   name?: string;
 
   @property({
-    type: 'array',
-    itemType: 'string',
+    type: 'string',
+    required: true,
   })
-  vses?: string[];
+  type: string;
 
+  @property({
+    type: 'string',
+    required: true
+  })
+  poolId: string;
 
-  constructor(data?: Partial<Adc>) {
+  constructor(data?: Partial<Monitor>) {
     super(data);
   }
 }
