@@ -1,0 +1,21 @@
+{
+  "name": "rest",
+  "connector": "rest",
+  "baseURL": "",
+  "crud": true,
+  "debug": true,
+  "operations": [
+    {
+      "template": {
+        "url": "{url}",
+        "method": "{method}"
+      },
+      "functions": {
+        "internalFunc": [
+          "url",
+          "method"
+        ]
+      }
+    }
+  ]
+}
