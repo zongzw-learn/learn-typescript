@@ -1,0 +1,9 @@
+{
+    "engines": {
+        "node": ">=8.9"
+    },
+    "dependencies": {
+        "@types/node": "^10.11.2",
+        "typescript": "<=3.4.5"
+    }
+}
