@@ -62,7 +62,7 @@
     "@types/uuid": "^3.4.4",
     "generate-password": "^1.4.2",
     "ip": "^1.1.5",
-    "loopback-connector-postgresql": "^3.5.0",
+    "loopback-connector-postgresql": "^5.5.1",
     "loopback-connector-rest": "^3.4.1",
     "loopback-connector-rest-hdr": "^3.4.4",
     "network-utils-tcp-ping": "^1.1.1",
