@@ -21,7 +21,7 @@
     "@loopback/rest-explorer": "^1.1.2",
     "@loopback/service-proxy": "^1.0.3",
     "@types/uuid": "^3.4.4",
-    "loopback-connector-postgresql": "^3.5.0",
+    "loopback-connector-postgresql": "^5.5.1",
     "loopback-connector-rest": "^3.4.1",
     "sinon": "^7.2.5",
     "typescript-logging": "^0.6.3",
